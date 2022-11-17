@@ -53,5 +53,10 @@
     "id": 11,
     "icon": "https://res.cloudinary.com/gurjotgill/image/upload/v1667274203/Gill/git_wbr7dv.png",
     "name": "Git"
+  },
+  {
+    "id": 12,
+    "icon": "https://res.cloudinary.com/gurjotgill/image/upload/v1668660824/Gill/WordPress_ytglxi.png",
+    "name": "WordPress"
   }
 ]

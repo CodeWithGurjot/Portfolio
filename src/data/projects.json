@@ -10,21 +10,21 @@
     "id": 2,
     "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489571/Gill/keepsafe_txpmmw.png",
     "title": "Keep-Safe",
-    "demoLink": "#",
+    "demoLink": "https://keepsafe.gurjotgill.com/",
     "codeLink": "https://github.com/CodeWithGurjot/KeepSafe"
   },
   {
     "id": 3,
     "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489571/Gill/textutils_lxps2f.png",
     "title": "Text-Utils",
-    "demoLink": "#",
+    "demoLink": "https://gill-textutils.netlify.app/",
     "codeLink": "https://github.com/CodeWithGurjot/TextUtils"
   },
   {
     "id": 4,
     "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489571/Gill/epic_sewtmc.png",
     "title": "Epic-Cleaning",
-    "demoLink": "#",
+    "demoLink": "https://gill-epic.netlify.app/",
     "codeLink": "https://github.com/CodeWithGurjot/EpicCleaning-ts"
   },
   {
