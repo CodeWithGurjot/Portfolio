@@ -7,6 +7,8 @@ import Projects from './components/Projects';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App = () => {
   useEffect(() => {
@@ -20,6 +22,8 @@ const App = () => {
       <AboutCard />
       <Projects />
       <Skills />
+      <Contact />
+      <Footer />
     </Box>
   );
 };

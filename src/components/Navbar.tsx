@@ -18,6 +18,7 @@ import {
 import React, { ReactNode } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { ModeSwitch } from './ModeSwitch';
+import scrollToElement from '../utils/scroll';
 
 interface Props {
   children: ReactNode;
@@ -41,8 +42,9 @@ const Navbar = () => {
     );
   };
 
-  const handleNavClick = () => {
+  const handleNavClick = (id: string) => {
     onClose();
+    scrollToElement(id);
   };
 
   return (
@@ -60,18 +62,26 @@ const Navbar = () => {
         shadow='2xl'
         alignItems='center'
       >
-        <Text fontSize='35px' fontFamily='e' fontWeight='600' mt='1' color='white'>
+        <Text
+          cursor='pointer'
+          onClick={() => scrollToElement('home')}
+          fontSize='35px'
+          fontFamily='e'
+          fontWeight='600'
+          mt='1'
+          color='white'
+        >
           Gurjot Gill
         </Text>
         <HStack spacing={8}>
-          <NavItem>HOME</NavItem>
-          <NavItem>ABOUT</NavItem>
-          <NavItem>PROJECTS</NavItem>
-          <NavItem>EXPERIENCE</NavItem>
+          <NavItem onClick={() => scrollToElement('home')}>HOME</NavItem>
+          <NavItem onClick={() => scrollToElement('about')}>ABOUT</NavItem>
+          <NavItem onClick={() => scrollToElement('projects')}>PROJECTS</NavItem>
+          <NavItem onClick={() => scrollToElement('skills')}>SKILLS</NavItem>
         </HStack>
         <Flex>
           <ModeSwitch />
-          <Button ml={5} rounded='2xl'>
+          <Button onClick={() => scrollToElement('contact')} ml={5} rounded='2xl'>
             LET'S CHAT
           </Button>
         </Flex>
@@ -89,7 +99,14 @@ const Navbar = () => {
         zIndex={5}
         shadow='2xl'
       >
-        <Text fontSize='25px' fontFamily='e' fontWeight='600' mt='1' color='white'>
+        <Text
+          onClick={() => scrollToElement('home')}
+          fontSize='25px'
+          fontFamily='e'
+          fontWeight='600'
+          mt='1'
+          color='white'
+        >
           Gurjot Gill
         </Text>
         <Box>
@@ -101,22 +118,59 @@ const Navbar = () => {
           <DrawerContent borderRight='2px' borderColor='white' bgColor='purple.500'>
             <DrawerCloseButton color='white' m={4} size='lg' />
             <DrawerHeader my={2}>
-              <Text fontSize='25px' fontFamily='e' fontWeight='600' mt='1' color='white'>
+              <Text
+                onClick={() => scrollToElement('home')}
+                fontSize='25px'
+                fontFamily='e'
+                fontWeight='600'
+                mt='1'
+                color='white'
+              >
                 Gurjot Gill
               </Text>
             </DrawerHeader>
             <Divider />
             <DrawerBody mt='4'>
               <VStack spacing='7' alignItems='flex-start'>
-                <NavItem onClick={handleNavClick}>HOME</NavItem>
+                <NavItem
+                  onClick={() => {
+                    handleNavClick('home');
+                  }}
+                >
+                  HOME
+                </NavItem>
                 <Divider />
-                <NavItem onClick={handleNavClick}>ABOUT</NavItem>
+                <NavItem
+                  onClick={() => {
+                    handleNavClick('about');
+                  }}
+                >
+                  ABOUT
+                </NavItem>
                 <Divider />
-                <NavItem onClick={handleNavClick}>WORK</NavItem>
+                <NavItem
+                  onClick={() => {
+                    handleNavClick('projects');
+                  }}
+                >
+                  PROJECTS
+                </NavItem>
                 <Divider />
-                <NavItem onClick={handleNavClick}>EXPERIENCE</NavItem>
+                <NavItem
+                  onClick={() => {
+                    handleNavClick('skills');
+                  }}
+                >
+                  SKILLS
+                </NavItem>
                 <Divider />
-                <Button onClick={handleNavClick}>CONTACT ME</Button>
+                <Button
+                  onClick={() => {
+                    handleNavClick('contact');
+                  }}
+                >
+                  CONTACT ME
+                </Button>
                 <Divider />
               </VStack>
             </DrawerBody>

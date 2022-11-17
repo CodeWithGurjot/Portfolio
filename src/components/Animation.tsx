@@ -7,9 +7,10 @@ interface Props {
   base: string;
   md: string;
   lg: string;
+  display?: { base: string; lg: string } | string;
 }
 
-const Animation = ({ animationData, base, md, lg }: Props) => {
+const Animation = ({ animationData, base, md, lg, display }: Props) => {
   const animationInstance = useRef(null);
 
   useEffect(() => {
@@ -30,7 +31,15 @@ const Animation = ({ animationData, base, md, lg }: Props) => {
       };
     }
   }, [animationInstance, animationData]);
-  return <Box ref={animationInstance} objectFit='cover' w={{ base, md, lg }} h='100%'></Box>;
+  return (
+    <Box
+      ref={animationInstance}
+      objectFit='cover'
+      display={display}
+      w={{ base, md, lg }}
+      h='100%'
+    ></Box>
+  );
 };
 
 Animation.defaultProps = {

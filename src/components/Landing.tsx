@@ -3,10 +3,13 @@ import Animation from './Animation';
 import animationData from '../assets/animations/coding.json';
 import { BsFillCloudDownloadFill } from 'react-icons/bs';
 import { FaTelegramPlane } from 'react-icons/fa';
+import scrollToElement from '../utils/scroll';
 
 const Landing = () => {
   return (
     <Flex
+      id='home'
+      scrollMarginTop='40'
       mt={5}
       h={{ base: '100%', lg: '86vh' }}
       direction={{ base: 'column', lg: 'row' }}
@@ -15,7 +18,7 @@ const Landing = () => {
     >
       <Flex justifyContent='center' w={{ base: '100%', lg: '50%' }} direction='column'>
         <Text fontSize='60px' mb={[0, 2]} fontFamily='h' fontWeight='extrabold'>
-          Kia Ora, I'am Gurjot
+          Kia Ora! I'am Gurjot
         </Text>
         <Text fontFamily='h' fontSize='32px'>
           Full-Stack Developer
@@ -26,7 +29,14 @@ const Landing = () => {
           <span style={{ fontWeight: 'bold' }}> Everyday.</span>
         </Text>
         <Flex pt={[5, 10]}>
-          <Button size='lg' rightIcon={<FaTelegramPlane />} colorScheme='purple'>
+          <Button
+            onClick={() => {
+              scrollToElement('contact');
+            }}
+            size='lg'
+            rightIcon={<FaTelegramPlane />}
+            colorScheme='purple'
+          >
             Contact Me
           </Button>
           <Button

@@ -1,7 +1,14 @@
-import { Flex, Image, Text } from '@chakra-ui/react';
+import { Divider, Flex, Image, Text, useColorModeValue } from '@chakra-ui/react';
 import skills from '../data/skills.json';
+import skillsAnimation from '../assets/animations/skills.json';
+import Animation from './Animation';
 
-const SkillsIcon = ({ img, name }: { img: string; name: string }) => {
+interface Props {
+  img: string;
+  name: string;
+}
+
+const SkillsIcon = ({ img, name }: Props) => {
   return (
     <Flex
       data-aos='zoom-in'
@@ -11,9 +18,7 @@ const SkillsIcon = ({ img, name }: { img: string; name: string }) => {
       alignItems='center'
       justifyContent='center'
     >
-      <Flex bgColor='purple.200' rounded='full' p={2}>
-        <Image objectFit='cover' src={img} boxSize='60px' cursor='pointer' />
-      </Flex>
+      <Image rounded='2xl' objectFit='cover' src={img} boxSize='60px' cursor='pointer' />
       <Text mt={2} fontFamily='p' fontSize='15px'>
         {name}
       </Text>
@@ -23,24 +28,37 @@ const SkillsIcon = ({ img, name }: { img: string; name: string }) => {
 
 const Skills = () => {
   return (
-    <Flex mb={10} alignItems='center' justifyContent='center' mt={10} direction='column'>
+    <Flex
+      id='skills'
+      scrollMarginTop={{ base: 32, md: 24 }}
+      alignItems='center'
+      justifyContent='center'
+      mt={14}
+      direction='column'
+    >
       <Text textAlign='center' fontFamily='h' fontWeight='700' fontSize='60px'>
         SKILLS
       </Text>
-      <Flex direction={{ base: 'column', md: 'row' }} w={{ base: '100%', md: '70%' }}>
+      <Divider mb={8} borderColor={useColorModeValue('black', 'white')} w='50%' />
+      <Flex
+        alignItems='center'
+        justifyContent='center'
+        direction={{ base: 'column', lg: 'row' }}
+        w={{ base: '100%', lg: '70%' }}
+      >
         <Flex
           alignItems='center'
           justifyContent='center'
-          width={{ base: '100%', md: '50%' }}
+          width={{ base: '100%', lg: '50%' }}
           px={5}
-          gap={8}
+          gap={12}
           wrap='wrap'
         >
           {skills.map((skill) => (
             <SkillsIcon key={skill.id} img={skill.icon} name={skill.name} />
           ))}
         </Flex>
-        <Flex w={{ base: '100%', md: '50%' }}></Flex>
+        <Animation animationData={skillsAnimation} display={{ base: 'none', lg: 'flex' }} />
       </Flex>
     </Flex>
   );

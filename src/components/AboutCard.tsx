@@ -1,16 +1,22 @@
 import { Divider, Flex, Image, Text, useColorModeValue } from '@chakra-ui/react';
+
 const AboutCard = () => {
   function getAge(dateString: string): number {
     const birthday = +new Date(dateString);
     return ~~((Date.now() - birthday) / 31557600000);
   }
-
   return (
-    <Flex mt={10} alignItems='center' justifyContent='center'>
+    <Flex
+      id='about'
+      scrollMarginTop={{ base: 24, lg: 40 }}
+      mt={14}
+      alignItems='center'
+      justifyContent='center'
+    >
       <Flex
         py={8}
         px={6}
-        w={{ base: '95%', md: '82%', lg: '70%' }}
+        w={{ base: '92%', md: '82%', lg: '70%' }}
         rounded='2xl'
         bgColor={useColorModeValue('purple.500', 'purple.100')}
         color={useColorModeValue('white', 'black')}

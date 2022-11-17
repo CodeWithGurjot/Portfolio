@@ -34,15 +34,37 @@ const ProjectCard = ({ image, title, demoLink, codeLink }: Props) => {
       direction='column'
       w={{ base: '92%', md: '80%' }}
     >
-      <Image borderRadius='2xl' src={image} />
+      <Image
+        h='190px'
+        // w={{ base: '80vw', lg: '50vw' }}
+        w='100vw'
+        borderRadius='2xl'
+        border='1px'
+        borderColor='black'
+        src={image}
+      />
       <Text mt={5} fontFamily='h' fontSize='30px'>
         {title}
       </Text>
       <Flex mt={5} justifyContent='space-between'>
-        <Button rightIcon={<BiLinkExternal />} w='45%' colorScheme='purple' as='a' href={demoLink}>
+        <Button
+          rightIcon={<BiLinkExternal />}
+          w='45%'
+          colorScheme='purple'
+          as='a'
+          target='_blank'
+          href={demoLink}
+        >
           Demo
         </Button>
-        <Button rightIcon={<AiOutlineGithub />} w='45%' colorScheme='purple' as='a' href={codeLink}>
+        <Button
+          rightIcon={<AiOutlineGithub />}
+          w='45%'
+          colorScheme='purple'
+          as='a'
+          target='_blank'
+          href={codeLink}
+        >
           Code
         </Button>
       </Flex>
@@ -52,15 +74,16 @@ const ProjectCard = ({ image, title, demoLink, codeLink }: Props) => {
 
 const Projects = () => {
   return (
-    <Flex mt={10} direction='column' alignItems='center'>
+    <Flex id='projects' scrollMarginTop={24} mt={14} direction='column' alignItems='center'>
       <Text fontFamily='h' fontWeight='700' fontSize='60px'>
         PROJECTS
       </Text>
       <Divider mb={8} borderColor={useColorModeValue('black', 'white')} w='50%' />
       <Flex alignItems='center' justifyContent='center'>
-        <SimpleGrid rowGap={8} columns={{ base: 1, md: 2, '2xl': 3 }}>
+        <SimpleGrid gap={5} rowGap={8} columns={{ base: 1, md: 2, '2xl': 3 }}>
           {projects.map((project) => (
             <ProjectCard
+              key={project.id}
               demoLink={project.demoLink}
               codeLink={project.codeLink}
               title={project.title}
