@@ -6,9 +6,10 @@ import Animation from './Animation';
 interface Props {
   img: string;
   name: string;
+  alt: string;
 }
 
-const SkillsIcon = ({ img, name }: Props) => {
+const SkillsIcon = ({ img, name, alt }: Props) => {
   return (
     <Flex
       data-aos='zoom-in'
@@ -18,7 +19,15 @@ const SkillsIcon = ({ img, name }: Props) => {
       alignItems='center'
       justifyContent='center'
     >
-      <Image rounded='2xl' objectFit='cover' src={img} boxSize='60px' cursor='pointer' />
+      <Image
+        alt={alt}
+        loading='lazy'
+        rounded='2xl'
+        objectFit='cover'
+        src={img}
+        boxSize='60px'
+        cursor='pointer'
+      />
       <Text mt={2} fontFamily='p' fontSize='15px'>
         {name}
       </Text>
@@ -55,7 +64,7 @@ const Skills = () => {
           wrap='wrap'
         >
           {skills.map((skill) => (
-            <SkillsIcon key={skill.id} img={skill.icon} name={skill.name} />
+            <SkillsIcon key={skill.id} img={skill.icon} name={skill.name} alt={skill.name} />
           ))}
         </Flex>
         <Animation animationData={skillsAnimation} display={{ base: 'none', lg: 'flex' }} />

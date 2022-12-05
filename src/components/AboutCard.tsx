@@ -29,7 +29,8 @@ const AboutCard = () => {
           border='2px'
           rounded='2xl'
           boxSize={{ base: '350px', md: '490px', lg: '400px' }}
-          src='https://res.cloudinary.com/gurjotgill/image/upload/v1667274204/Gill/Me_pzq3yi.jpg'
+          alt='gurjot gill'
+          src='https://res.cloudinary.com/gurjotgill/image/upload/q_auto:eco/v1670199188/Gill/Me.webp'
         />
         <Flex
           alignItems={{ base: 'center', lg: 'flex-start' }}

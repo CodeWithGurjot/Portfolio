@@ -40,6 +40,9 @@ const Landing = () => {
             Contact Me
           </Button>
           <Button
+            as='a'
+            href='cv/CV.pdf'
+            download='CV.pdf'
             rightIcon={<BsFillCloudDownloadFill />}
             size='lg'
             bgColor='purple.100'

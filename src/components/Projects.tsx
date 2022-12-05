@@ -16,9 +16,10 @@ interface Props {
   title: string;
   demoLink: string;
   codeLink: string;
+  alt: string;
 }
 
-const ProjectCard = ({ image, title, demoLink, codeLink }: Props) => {
+const ProjectCard = ({ image, title, demoLink, codeLink, alt }: Props) => {
   return (
     <Flex
       bgColor='whiteAlpha.200'
@@ -35,8 +36,9 @@ const ProjectCard = ({ image, title, demoLink, codeLink }: Props) => {
       w={{ base: '92%', md: '80%' }}
     >
       <Image
+        alt={alt}
         h='190px'
-        // w={{ base: '80vw', lg: '50vw' }}
+        loading='lazy'
         w='100vw'
         borderRadius='2xl'
         border='1px'
@@ -52,7 +54,7 @@ const ProjectCard = ({ image, title, demoLink, codeLink }: Props) => {
           w='45%'
           colorScheme='purple'
           as='a'
-          target='_blank'
+          target={demoLink !== '#' ? '_blank' : '_self'}
           href={demoLink}
         >
           Demo
@@ -83,6 +85,7 @@ const Projects = () => {
         <SimpleGrid gap={5} rowGap={8} columns={{ base: 1, md: 2, '2xl': 3 }}>
           {projects.map((project) => (
             <ProjectCard
+              alt={project.alt}
               key={project.id}
               demoLink={project.demoLink}
               codeLink={project.codeLink}

@@ -1,44 +1,50 @@
 [
   {
     "id": 1,
-    "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489572/Gill/chatbox_n664z9.png",
+    "image": "https://res.cloudinary.com/gurjotgill/image/upload/c_scale,h_188,q_auto:eco,w_289/v1670199173/Gill/chatbox.webp",
     "title": "Chat-Box",
     "demoLink": "https://chatbox.gurjotgill.com",
-    "codeLink": "https://github.com/CodeWithGurjot/ChatBox"
+    "codeLink": "https://github.com/CodeWithGurjot/ChatBox",
+    "alt": "Chat Box"
   },
   {
     "id": 2,
-    "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489571/Gill/keepsafe_txpmmw.png",
+    "image": "https://res.cloudinary.com/gurjotgill/image/upload/c_scale,h_188,q_auto:eco,w_289/v1670199171/Gill/keepsafe.webp",
     "title": "Keep-Safe",
     "demoLink": "https://keepsafe.gurjotgill.com/",
-    "codeLink": "https://github.com/CodeWithGurjot/KeepSafe"
+    "codeLink": "https://github.com/CodeWithGurjot/KeepSafe",
+    "alt": "Keep Safe"
   },
   {
     "id": 3,
-    "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489571/Gill/textutils_lxps2f.png",
+    "image": "https://res.cloudinary.com/gurjotgill/image/upload/c_scale,h_188,q_auto:eco,w_289/v1670199176/Gill/textutils.webp",
     "title": "Text-Utils",
     "demoLink": "https://gill-textutils.netlify.app/",
-    "codeLink": "https://github.com/CodeWithGurjot/TextUtils"
+    "codeLink": "https://github.com/CodeWithGurjot/TextUtils",
+    "alt": "Text Utils"
   },
   {
     "id": 4,
-    "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489571/Gill/epic_sewtmc.png",
+    "image": "https://res.cloudinary.com/gurjotgill/image/upload/c_scale,h_188,q_auto:eco,w_289/v1670199173/Gill/epic.webp",
     "title": "Epic-Cleaning",
     "demoLink": "https://gill-epic.netlify.app/",
-    "codeLink": "https://github.com/CodeWithGurjot/EpicCleaning-ts"
+    "codeLink": "https://github.com/CodeWithGurjot/EpicCleaning-ts",
+    "alt": "Epic Cleaning"
   },
   {
     "id": 5,
-    "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489571/Gill/secrets_u0dadj.png",
+    "image": "https://res.cloudinary.com/gurjotgill/image/upload/c_scale,h_188,q_auto:eco,w_289/v1670199171/Gill/secrets.webp",
     "title": "Secrets-App",
     "demoLink": "#",
-    "codeLink": "https://github.com/CodeWithGurjot/Secrets-App"
+    "codeLink": "https://github.com/CodeWithGurjot/Secrets-App",
+    "alt": "Secrets App"
   },
   {
     "id": 6,
-    "image": "https://res.cloudinary.com/gurjotgill/image/upload/v1668489572/Gill/newsguru_jj4nmw.png",
+    "image": "https://res.cloudinary.com/gurjotgill/image/upload/c_scale,h_188,q_auto:eco,w_289/v1670199195/Gill/newsguru.webp",
     "title": "News-Guru",
     "demoLink": "#",
-    "codeLink": "https://github.com/CodeWithGurjot/NewsGuru"
+    "codeLink": "https://github.com/CodeWithGurjot/NewsGuru",
+    "alt": "News Guru"
   }
 ]
